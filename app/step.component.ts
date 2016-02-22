@@ -1,5 +1,6 @@
-import {Component} from 'angular2/core';
+import {Component, Input} from 'angular2/core';
 import {NgFor} from 'angular2/common';
+import {Step} from './step';
 import {Tag} from './tag';
 
 @Component({
@@ -9,15 +10,16 @@ import {Tag} from './tag';
 })
 export class StepComponent {
     public newTagName : string; 
-    public tags : Tag[];
+    @Input() step : Step;
     
     constructor(){
-        this.tags = [];
         this.newTagName = '';
     }
     
     addTag(){
-        this.tags.push(new Tag(this.newTagName));
-        this.newTagName = '';
+        if(this.newTagName !== ''){
+            this.step.addTag(new Tag(this.newTagName));
+            this.newTagName = '';
+        }
     }
 }
