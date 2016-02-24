@@ -7,7 +7,14 @@
             <button class="btn btn-raised btn-danger" (click)="removeStep(step)">Remove</button>
         </div>
     </div>
-    <div class="col-sm-2 col-sm-offset-10">
-        <button class="btn btn-raised btn-primary" (click)="addStep()">Add Step</button>
-    </div>
+    <div class="row">
+        <div class="col-sm-10 form-group form-inline">
+            <p class="lead">{{set.distance}} m X
+            <input type="number" class="form-control" [(ngModel)]="set.numberOfExecutions" min="1" max="100" step="1" />
+            = {{set.totalDistance}} m</p>
+        </div>
+        <div class="col-sm-2">
+            <button class="btn btn-raised btn-primary" (click)="addStep()">Add Step</button>
+        </div>
+    </div> 
 </div>
