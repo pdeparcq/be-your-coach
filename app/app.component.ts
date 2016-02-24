@@ -1,16 +1,16 @@
 import {Component} from 'angular2/core';
-import {StepComponent} from './step.component';
-import {Step} from './step';
+import {SetComponent} from './set.component';
+import {Set} from './set';
 
 @Component({
     selector: 'my-app',
     templateUrl: 'app/app.component.html',
-    directives: [StepComponent]
+    directives: [SetComponent]
 })
 export class AppComponent { 
-    public step : Step;
+    public set : Set;
     
     constructor() {
-        this.step = new Step();
+        this.set = new Set();
     }
 }

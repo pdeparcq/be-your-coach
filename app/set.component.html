@@ -1,0 +1,4 @@
+<div class="well row">
+    <my-step *ngFor="#step of set.steps" [step]="step"></my-step>
+    <button class="btn btn-raised btn-primary" (click)="addStep()">Add Step</button>
+</div>
