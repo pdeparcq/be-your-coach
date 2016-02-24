@@ -8,7 +8,7 @@ import {StepComponent} from './step.component';
     selector: 'my-set',
     templateUrl: 'app/set.component.html',
     styleUrls: ['app/set.component.css'],
-    directives: [NgFor, StepComponent]
+    directives: [StepComponent]
 })
 export class SetComponent{
     @Input() set : Set;
