@@ -15,4 +15,8 @@ export class SetComponent{
     addStep() {
         this.set.addStep(new Step());
     }
+    
+    removeStep(step : Step) {
+        this.set.removeStep(step);
+    }
 }

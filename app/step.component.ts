@@ -6,6 +6,7 @@ import {Tag} from './tag';
 @Component({
     selector: 'my-step',
     templateUrl: 'app/step.component.html',
+    styleUrls: ['app/step.component.css'],
     directives: [NgFor]
 })
 export class StepComponent {

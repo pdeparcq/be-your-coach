@@ -1,5 +1,9 @@
 <div class="row">
-        <div class="col-sm-12 form-group form-inline">
+        <div class="step col-sm-10 form-group form-inline">
+            <div class="input-group">
+                <input type="number" class="form-control input-sm" min="25" max="10000" step="25" placeholder="Distance"/>
+                <div class="input-group-addon">meters</div>
+            </div>
             <button *ngFor="#tag of step.tags" class="btn btn-raised btn-default">{{tag.name}}</button>
             <input type="text" class="form-control input-sm" [(ngModel)]="newTagName" (keyup.enter)="addTag()" placeholder="Tag name"/>
             <button class="btn btn-raised btn-primary" (click)="addTag()">Add Tag</button>
