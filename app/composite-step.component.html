@@ -1,9 +1,9 @@
-<div class="row" *ngFor="#step of compositeStep.steps" (mouseover)="currentStep=step;" (mouseleave)="currentStep=null;">
+<div class="row" *ngFor="#step of compositeStep.steps" [class.active]="currentStep==step" (mouseover)="currentStep=step;" (mouseleave)="currentStep=null;">
     <div class="col-sm-10">
         <my-step [step]="step"></my-step>
     </div>
-    <div class="col-sm-2" *ngIf="currentStep==step">
-        <button class="btn btn-fab btn-fab-mini btn-danger" (click)="removeStep(step)">
+    <div class="col-sm-2 text-right" *ngIf="currentStep==step">
+        <button *ngIf="compositeStep.steps.length > 1;" class="btn btn-fab btn-fab-mini btn-danger" (click)="removeStep(step)">
             <i class="material-icons">clear</i>
         </button>
         <button class="btn btn-fab btn-fab-mini btn-primary" (click)="addStep()">

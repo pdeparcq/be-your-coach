@@ -6,6 +6,7 @@ import {StepComponent} from './step.component';
 @Component({
     selector: 'my-composite-step',
     templateUrl: 'app/composite-step.component.html',
+    styleUrls: ['app/composite-step.component.css'],
     directives: [StepComponent]
 })
 export class CompositeStepComponent {
