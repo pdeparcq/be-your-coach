@@ -1,16 +1,16 @@
 import {Component} from 'angular2/core';
-import {SetComponent} from './set.component';
-import {Set} from './set';
+import {PhaseComponent} from './phase.component';
+import {Phase} from './phase';
 
 @Component({
     selector: 'my-app',
     templateUrl: 'app/app.component.html',
-    directives: [SetComponent]
+    directives: [PhaseComponent]
 })
-export class AppComponent { 
-    public set : Set;
+export class AppComponent {
+    public phase : Phase;
     
     constructor() {
-        this.set = new Set();
+        this.phase = new Phase('warmup');
     }
 }

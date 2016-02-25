@@ -1,0 +1,11 @@
+<div class="panel panel-info">
+  <div class="panel-heading">
+    <h3 class="panel-title">{{phase.name}}</h3>
+  </div>
+  <div class="panel-body">
+    <my-set *ngFor="#set of phase.sets" [set]="set"></my-set>
+    <button class="btn btn-fab btn-primary" (click)="addSet()">
+        <i class="material-icons">add</i>
+    </button>
+  </div>
+</div>
