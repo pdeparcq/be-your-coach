@@ -5,7 +5,7 @@ export class Set{
     public numberOfExecutions : number;
     
     constructor() {
-        this.steps = [];
+        this.steps = [new Step()];
         this.numberOfExecutions = 1;
     }
     
