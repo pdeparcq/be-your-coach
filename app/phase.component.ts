@@ -14,4 +14,8 @@ export class PhaseComponent {
     addSet(){
         this.phase.addSet(new Set());
     }
+    
+    removeSet(set: Set){
+        this.phase.removeSet(set);
+    }
 }

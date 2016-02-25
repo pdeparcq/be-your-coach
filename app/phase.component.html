@@ -3,7 +3,16 @@
     <h3 class="panel-title">{{phase.name}}</h3>
   </div>
   <div class="panel-body">
-    <my-set *ngFor="#set of phase.sets" [set]="set"></my-set>
+    <div class="row" *ngFor="#set of phase.sets">
+        <div class="col-sm-11">
+            <my-set  [set]="set"></my-set>
+        </div>
+        <div class="col-sm-1 text-right">
+            <button class="btn btn-fab btn-fab-mini btn-danger" (click)="removeSet(set)">
+                <i class="material-icons">clear</i>
+            </button>
+        </div>
+    </div>
     <button class="btn btn-fab btn-primary" (click)="addSet()">
         <i class="material-icons">add</i>
     </button>
