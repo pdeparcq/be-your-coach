@@ -1,29 +1,15 @@
-import {Step} from './step';
+import {CompositeStep} from './composite-step';
 
 export class Set{
-    public steps : Step[];
     public numberOfExecutions : number;
+    public step : CompositeStep;
     
     constructor() {
-        this.steps = [new Step()];
         this.numberOfExecutions = 1;
-    }
-    
-    addStep(step : Step) {
-        this.steps.push(step);
-    }
-    
-    removeStep(step: Step) {
-        this.steps.splice(this.steps.indexOf(step), 1);
+        this.step = new CompositeStep();
     }
     
     get distance() : number {
-        var total = 0;
-        this.steps.forEach(s => total += s.distance);
-        return total;
-    }
-    
-    get totalDistance() : number {
-        return this.distance * this.numberOfExecutions;
+        return this.step.distance * this.numberOfExecutions;
     }
 }
