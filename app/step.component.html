@@ -1,11 +1,11 @@
 <div class="row">
-    <div class="col-sm-2 form-group form-inline">
+    <div class="col-sm-3 form-group form-inline">
         <div class="input-group">
             <input type="number" class="form-control input-sm" [(ngModel)]="step.distance" min="25" max="10000" step="25" placeholder="Distance"/>
             <div class="input-group-addon">m</div>
         </div>
     </div>
-    <div class="col-sm-10 form-group form-inline">
+    <div class="col-sm-9 form-group form-inline">
         <button *ngFor="#tag of step.tags" class="btn btn-raised btn-default">{{tag.name}}</button>
         <input type="text" class="form-control input-sm" [(ngModel)]="newTagName" (keyup.enter)="addTag()" placeholder="Tag name"/>
     </div>
