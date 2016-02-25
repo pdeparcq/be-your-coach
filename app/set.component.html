@@ -8,7 +8,9 @@
                 <my-step [step]="step"></my-step>
             </div>
             <div class="col-sm-2">
-                <button class="btn btn-raised btn-danger" (click)="removeStep(step)">Remove</button>
+                <button class="btn btn-fab btn-fab-mini btn-danger" (click)="removeStep(step)">
+                    <i class="material-icons">clear</i>
+                </button>
             </div>
         </div>
         <div class="row">
@@ -16,7 +18,9 @@
                 <p class="lead">{{set.distance}} m</p>
             </div>
             <div class="col-sm-2">
-                <button class="btn btn-raised btn-primary" (click)="addStep()">Add Step</button>
+                <button class="btn btn-fab btn-fab-mini btn-primary" (click)="addStep()">
+                    <i class="material-icons">add</i>
+                </button>
             </div>
         </div> 
     </div>
