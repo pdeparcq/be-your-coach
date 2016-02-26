@@ -1,16 +1,16 @@
 import {Component} from 'angular2/core';
-import {PhaseComponent} from './phase.component';
-import {Phase} from './phase';
+import {WorkoutComponent} from './workout.component';
+import {Workout} from './workout';
 
 @Component({
     selector: 'my-app',
     templateUrl: 'app/app.component.html',
-    directives: [PhaseComponent]
+    directives: [WorkoutComponent]
 })
 export class AppComponent {
-    public phase : Phase;
+    public workout : Workout;
     
     constructor() {
-        this.phase = new Phase('warmup');
+        this.workout = new Workout('Test Workout');
     }
 }

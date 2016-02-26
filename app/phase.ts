@@ -14,4 +14,10 @@ export class Phase {
     removeSet(set : Set){
         this.sets.splice(this.sets.indexOf(set), 1);
     }
+    
+    get distance() : number {
+        var total = 0;
+        this.sets.forEach(s => total += s.distance);
+        return total;
+    }
 }

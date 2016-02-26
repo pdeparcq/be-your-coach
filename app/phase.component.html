@@ -1,6 +1,14 @@
 <div class="panel panel-info">
   <div class="panel-heading">
-    <h3 class="panel-title">{{phase.name}}</h3>
+    <div class="row">
+        <div class="col-sm-6">
+            <h3 class="panel-title">{{phase.name}}</h3>
+        </div>
+        <div class="col-sm-6 text-right">
+            <p>{{phase.distance}} m</p>
+        </div>
+    </div>
+    
   </div>
   <div class="panel-body">
     <div class="row" *ngFor="#set of phase.sets">
