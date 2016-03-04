@@ -4,7 +4,7 @@ export class Workout {
     public phases: Phase[];
 
     constructor(public name: string) {
-        this.phases = [new Phase("warm-up"), new Phase("sets"), new Phase("cooldowm")];
+        this.phases = [new Phase("warm-up"), new Phase("sets"), new Phase("cooldown")];
     }
     
     get distance() : number {
