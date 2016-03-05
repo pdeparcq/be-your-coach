@@ -11,6 +11,7 @@ npm start
 
 ## Links to documentation used for development
 
+* https://angular.io/docs/ts/latest/quickstart.html
 * http://fezvrasta.github.io/bootstrap-material-design/bootstrap-elements.html
 * https://design.google.com/icons/
 * https://angular.io/cheatsheet
