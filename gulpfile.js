@@ -2,6 +2,7 @@ const gulp = require('gulp');
 const del = require('del');
 const sourcemaps = require('gulp-sourcemaps');
 const typescript = require('gulp-typescript');
+const webserver = require('gulp-webserver');
 const tscConfig = require('./tsconfig.json');
 
 gulp.task('default', ['build']);
@@ -53,6 +54,15 @@ gulp.task('compile', ['clean'], function () {
 });
 
 gulp.task('build', ['compile','copy:libs','copy:styles','copy:assets']);
+
+gulp.task('webserver', function() {
+  gulp.src('dist')
+    .pipe(webserver({
+      livereload: true,
+      directoryListing: false,
+      open: true
+    }));
+});
 
 gulp.task('watch', function(){
    gulp.watch('app/**/*.ts', ['build']);
