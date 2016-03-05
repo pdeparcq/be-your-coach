@@ -15,7 +15,7 @@ npm start
 * https://design.google.com/icons/
 * https://angular.io/cheatsheet
 
-## Links to documentation used for build and delopy
+## Links to documentation used for build and deploy
 
 * http://blog.scottlogic.com/2015/12/24/creating-an-angular-2-build.html
 * https://github.com/projectkudu/kudu/wiki/Deployment-credentials
