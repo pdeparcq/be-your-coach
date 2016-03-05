@@ -13,7 +13,7 @@ gulp.task('clean', function () {
 });
 
 // copy dependencies
-gulp.task('copy:libs', ['clean'], function() {
+gulp.task('copy:libs', function() {
   return gulp.src([
         "node_modules/es6-shim/es6-shim.min.js",
         "node_modules/systemjs/dist/system-polyfills.js",
@@ -29,7 +29,7 @@ gulp.task('copy:libs', ['clean'], function() {
     .pipe(gulp.dest('dist/lib'))
 });
 
-gulp.task('copy:styles', ['clean'], function(){
+gulp.task('copy:styles', function(){
    return gulp.src([
         "node_modules/bootstrap-material-design/dist/css/bootstrap-material-design.css",
         "node_modules/bootstrap-material-design/dist/css/ripples.min.css"
@@ -38,13 +38,13 @@ gulp.task('copy:styles', ['clean'], function(){
 });
 
 // copy static assets - i.e. non TypeScript compiled source
-gulp.task('copy:assets', ['clean'], function() {
+gulp.task('copy:assets', function() {
   return gulp.src(['app/**/*', 'index.html', '!app/**/*.ts'], { base : './' })
     .pipe(gulp.dest('dist'))
 });
 
 // TypeScript compile
-gulp.task('compile', ['clean'], function () {
+gulp.task('compile', function () {
   return gulp
     .src('app/**/*.ts')
     .pipe(sourcemaps.init()) 
@@ -60,7 +60,8 @@ gulp.task('webserver', function() {
     .pipe(webserver({
       livereload: true,
       directoryListing: false,
-      open: true
+      open: true,
+      fallback: 'index.html'
     }));
 });
 
