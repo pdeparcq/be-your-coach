@@ -5,6 +5,10 @@ App for self-coaching athletes
 
 npm install
 
+## How to build
+
+gulp build
+
 ## How to run (will start gulp watch and gulp webserver together)
 
 npm start
